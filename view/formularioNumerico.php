@@ -6,6 +6,7 @@
       <option value="archivo">archivo</option>
       <option value="tabla">tabla</option>
       <option value="lista">lista</option>
+      <option value="rango">rango</option>
    </select><br/>
    <div class="" id="opcionconfiguracion">
       

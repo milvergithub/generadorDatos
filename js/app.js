@@ -58,7 +58,27 @@ function cargarContenidoTexto(){
           }
       });
 }
-
+function cargarColumnasTabla(){
+   var columna=$("#tabla").val();
+   var dato=new FormData();
+   dato.append("tabla",columna);
+   $.ajax({
+          type: "POST",
+          url:"controller/columnasTabla.php",
+          enctype:'multipart/form-data',
+          data: dato,
+          cache: false,
+          contentType: false,
+          processData: false,
+          mimeType: 'multipart/form-data',
+          success: function(data){
+            $("#columna").html(data);
+          },
+          error: function(){
+            $("#columna").text("error")
+          }
+      });
+}
 
 
 
